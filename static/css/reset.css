@@ -1,5 +1,5 @@
 html {
-  overflow-y: scroll
+  overflow-y: scroll;
 }
 :root {
   --bgcolor: #f8f9fa;
@@ -9,16 +9,24 @@ html {
   --visitedcolor: #551a8b;
   --precolor: #fff;
   --prebgcolor: #000;
+  --codebgcolor: #eee;
+  --codecolor: #111;
+  --blockquotebgcolor: #f9f9f9;
+  --blockquotecolor: #555;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-     --bgcolor: #222;
-     --dimcolor: #333;
-     --fontcolor: #ddd;
-     --linkcolor: #5bf;
-     --visitedcolor: #ae5ee0;
-     --precolor: #fff;
-     --prebgcolor: #383838;
+    --bgcolor: #222;
+    --dimcolor: #333;
+    --fontcolor: #ddd;
+    --linkcolor: #5bf;
+    --visitedcolor: #ae5ee0;
+    --precolor: #fff;
+    --prebgcolor: #383838;
+    --codebgcolor: #666;
+    --codecolor: #eee;
+    --blockquotebgcolor: #333;
+    --blockquotecolor: #ddd;
   }
 }
 body {
@@ -41,12 +49,14 @@ a:visited {
 a:active {
   color: var(--visitedcolor);
 }
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   line-height: 1.2;
 }
-p > code {
-  color: var(--precolor);
-  background: var(--prebgcolor);
+code {
+  color: var(--codecolor);
+  background: var(--codebgcolor);
   padding: 2px;
 }
 pre {
@@ -58,7 +68,7 @@ pre {
 article {
   padding: 5px 0;
 }
-.center  {
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -76,4 +86,11 @@ figcaption {
 }
 figure {
   margin: auto;
+}
+blockquote {
+  border-left: 4px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  color: var(--blockquotecolor);
+  background-color: var(--blockquotebgcolor);
 }
