@@ -1,4 +1,4 @@
-<article class="summary">
+<!-- <article class="summary">
   <a href="{{ .Permalink }}">
     <h1 class="title">{{ .Title }}</h1>
     {{ with .Params.subtitle }}<h3 class="subtitle">{{ . }}</h3>{{ end }}
@@ -10,4 +10,20 @@
       <a href="{{ .Permalink }}">Read more...</a>
     {{ end }}
   </div>
+</article> -->
+
+<article class="summary">
+  <a href="{{ .Permalink }}">
+    <p style="font-size: 24px">{{ .Title }}</p>
+    {{ with .Params.subtitle }}
+    <p>{{ . }}</p>
+    {{ end }}
+    <p style="font-size: 14px">{{ partial "postMeta.html" . }}</p>
+  </a>
+  <!-- <div class="content"> -->
+  <!-- <p>{{ .Summary }}</p>
+    {{ if .Truncated }}
+      <a href="{{ .Permalink }}">Read more...</a>
+    {{ end }} -->
+  <!-- </div> -->
 </article>
